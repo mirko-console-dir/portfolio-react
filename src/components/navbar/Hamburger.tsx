@@ -1,4 +1,15 @@
-const Hamburger = () => {
+import {useState} from "react"
+import {menu, close} from "@/assets/navbar"
+
+type HamburgerProps = {
+  language: string;
+  navLinks: any
+};
+
+const Hamburger = ({language, navLinks}: HamburgerProps) => {
+  const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState("");
+
   return (
     <div className="lg:hidden flex justify-end items-center">
       <img
@@ -13,7 +24,7 @@ const Hamburger = () => {
         } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
       >
         <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-          {navLinks.map((nav) => (
+          {navLinks.map((nav: any) => (
             <li
               key={nav.id}
               className={`font-poppins font-medium cursor-pointer text-[16px] ${
