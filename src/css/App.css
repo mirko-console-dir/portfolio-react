@@ -1,0 +1,23 @@
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+/* New start here */
+.on__hover__drop__shadow:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.flag {
+  width: 1.5em;
+  line-height: 1.5em;
+  border-radius: 50%;
+}
