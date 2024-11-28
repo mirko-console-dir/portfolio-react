@@ -4,6 +4,7 @@ import { logo } from "@/assets/navbar";
 import { navLinks } from "@/constants/navbar";
 import SelectLanguage from "./SelectLanguage";
 import { useLanguage } from "@/hooks/useLanguage";
+import Hamburger from "./Hamburger";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -11,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-transparent`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-transparent no-select`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <div
@@ -22,12 +23,8 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold flex ">
-            Mirko Saponaro &nbsp;
-            <span className="sm:block hidden">
-              {" "}
-              | &nbsp; Fullstack Developer
-            </span>
+          <p className="text-white text-[18px] font-bold md:flex">
+            Mirko Saponaro &nbsp;<span className="xl:block hidden">| &nbsp;Fullstack Developer</span>
           </p>
         </div>
         <SelectLanguage language={language} />
@@ -46,6 +43,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <Hamburger language={language} navLinks={navLinks}/>
       </div>
     </nav>
   );
