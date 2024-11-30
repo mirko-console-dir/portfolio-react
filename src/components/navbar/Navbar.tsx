@@ -22,7 +22,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="neumorphism__out p-1">
+          <div className="neumorphism__out p-1 rounded-full">
             <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           </div>
           <p className="text-white text-[18px] font-bold md:flex on__hover__drop__shadow">
@@ -36,7 +36,7 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title[language] ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer neumorphism__out px-3`}
+              } hover:text-white text-[18px] font-medium cursor-pointer neumorphism__out px-3 rounded`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`} aria-label={nav.title}>

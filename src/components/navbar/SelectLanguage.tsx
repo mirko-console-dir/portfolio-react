@@ -16,7 +16,7 @@ const SelectLanguage = ({ language }: SelectLanguageProps) => {
 
   return (
     <div className="flex grow justify-center">
-      <button className="neumorphism__out p-1">
+      <button className="neumorphism__out p-1 rounded-full">
         <img
           src={globe}
           alt="select language"
