@@ -1,10 +1,8 @@
+type ObjStrKeyVal = { [key: string]: string };
+
 type NavItem = {
   id: string;
-  title: {
-    en: string;
-    it: string;
-    jp: string;
-  };
+  title: ObjStrKeyVal;
 };
 
 export const navLinks: NavItem[] = [

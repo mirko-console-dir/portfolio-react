@@ -9,6 +9,7 @@ import BounceBottomInDiv from "@/components/motion/div/BounceBottomInDiv";
 import { styles } from "@/css/theme/styles";
 import FadeInText from "@/components/motion/text/FadeInText";
 import useResponsiveWidth from "@/hooks/useResponsiveWidth";
+import ModalContentWork from "./ModalContentWork";
 
 const OPTIONS: EmblaOptionsType = { loop: true, duration: 30 };
 
@@ -67,6 +68,7 @@ const Works = () => {
         isOpen={isOpen} 
         onClose={toggleModal} 
         title={"Private Repository"}
+        children={<ModalContentWork/>}
       />
     </div>
   );

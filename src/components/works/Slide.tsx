@@ -22,8 +22,7 @@ type SlideProps = {
 const Slide = ({ projects, language, openModal }: SlideProps) => {
   return (
     <div
-    className={`${styles.paddingX} flex flex-wrap gap-10 justify-center pt-12 pb-8`}
-    
+      className={`${styles.paddingX} flex flex-wrap gap-10 justify-center pt-12 pb-4`}
     >
       {projects.map((project: Project, index: number) => (
         <ProjectCard
