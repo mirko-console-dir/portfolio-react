@@ -26,8 +26,8 @@ const ProjectCard = ({ project, language, openModal }: ProjectCardProps) => {
 
   return (
     <BounceBottomInDiv
-      containerClassName="cursor-pointer w-full md:w-1/3 lg:w-1/4"
-      className="neumorphism__out p-5 min-h-full no-select rounded-2xl flex flex-col"
+      containerClassName="cursor-pointer w-full md:w-2/5 xl:w-1/4"
+      className="neumorphism__out p-5 min-h-full rounded-2xl flex flex-col"
     >
       <div className="relative w-full h-[230px] cursor-pointer"
            onClick={project.source_code_link ? () => window.open(project.source_code_link, "_blank") : openModal}

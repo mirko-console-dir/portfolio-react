@@ -59,7 +59,7 @@ import React, {
   
     return (
       <button
-        className="embla__button embla__button--prev"
+        className="neumorphism__out embla__button embla__button--prev"
         type="button"
         {...restProps}
       >
@@ -79,7 +79,7 @@ import React, {
   
     return (
       <button
-        className="embla__button embla__button--next"
+        className="neumorphism__out embla__button embla__button--next"
         type="button"
         {...restProps}
       >

@@ -43,20 +43,20 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
       </div>
 
       <div className="embla__controls">
-        <div className="embla__buttons">
+        <div className="embla__buttons invisible lg:visible">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
 
-        <div className="embla__dots">
+        <div className="embla__dots gap-2">
           {scrollSnaps.map((_, index: number) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
-              )}
-            />
+              <DotButton
+                key={index}
+                onClick={() => onDotButtonClick(index)}
+                className={'neumorphism__out embla__dot'.concat(
+                  index === selectedIndex ? ' neumorphism__in embla__dot--selected' : ''
+                )}
+              />
           ))}
         </div>
       </div>

@@ -8,7 +8,7 @@ type ServiceCardProps = {
   index: number
 };
 const ServiceCard = ({ title, icon, index}: ServiceCardProps) => (
-  <Tilt className="w-full md:w-1/3 lg:w-1/5">
+  <Tilt className="w-full md:w-1/3 xl:w-1/5">
     <BounceBottomInDiv 
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
         visibleAmount={0.1}
