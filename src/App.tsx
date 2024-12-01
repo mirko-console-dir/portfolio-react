@@ -9,7 +9,7 @@ import Works from '@/components/works/Works'
 function App() {
 
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden no-select'>
       <Navbar />
       <Hero/>
       <About />

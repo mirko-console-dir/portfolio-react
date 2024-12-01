@@ -1,10 +1,14 @@
+import { useCallback, useState, useMemo } from "react";
 import EmblaCarousel from "@/components/shared-components/carousel/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
 import { projects } from "@/constants/work";
 import Slide from "./Slide";
 import { useLanguage } from "@/hooks/useLanguage";
-import { useCallback, useState } from "react";
 import Modal from "../modal/Modal";
+import BounceBottomInDiv from "@/components/motion/div/BounceBottomInDiv";
+import { styles } from "@/css/theme/styles";
+import FadeInText from "@/components/motion/text/FadeInText";
+import useResponsiveWidth from "@/hooks/useResponsiveWidth";
 
 const OPTIONS: EmblaOptionsType = { loop: true, duration: 30 };
 
@@ -16,8 +20,23 @@ function chunkArray<T>(array: T[], chunkSize: number): T[][] {
   return result;
 }
 const Works = () => {
-  const chunkedProjects = chunkArray(projects, 6);
-  const { language } = useLanguage();
+  const {language, translate} = useLanguage()
+  /* 
+    md		@media (min-width: 768px) { ... }
+    lg		@media (min-width: 1024px) { ... }
+    xl		@media (min-width: 1280px) { ... }
+    2xl	1536px
+ */
+  const screenWidth = useResponsiveWidth()
+  const numberOfElements = useMemo(()=>{
+    if(screenWidth < 768) return 1
+    if(screenWidth < 1280) return 2
+    return 6
+  }, [screenWidth])
+
+  console.log(screenWidth)
+  const chunkedProjects = chunkArray(projects, numberOfElements);
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleModal = useCallback(() => {
     setIsOpen((isOpen) => !isOpen);
@@ -25,6 +44,14 @@ const Works = () => {
 
   return (
     <div>
+      <BounceBottomInDiv className={`${styles.paddingX} pt-20`}>
+        <p className={`${styles.sectionSubText} `}>{translate('works.title')}</p>
+        <h2 className={`${styles.sectionHeadText}`}>{translate('works.subTitle')}</h2>
+      </BounceBottomInDiv>
+      <FadeInText className={`${styles.paddingX} mt-4 text-secondary text-[17px] leading-[30px]`}>
+        {translate('works.description')}
+      </FadeInText>
+
       <EmblaCarousel
         slides={chunkedProjects.map((group, index) => (
           <Slide
