@@ -8,17 +8,28 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import Autoplay from 'embla-carousel-autoplay'
+import { useAutoplay } from './EmblaCarouselAutoplay'
 
 
 type EmblaCarouselProps = {
   slides: ReactNode[]
   options?: EmblaOptionsType
+  isAutoplay?: boolean
 }
 
 const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
-  const { slides, options } = props
+  const { slides, options, isAutoplay } = props
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Fade()])
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Fade(), 
+    Autoplay({ 
+      playOnInit: isAutoplay ? true  : false, 
+      delay: 4000 
+    })
+  ])
+
+  const { toggleAutoplay } = useAutoplay(emblaApi)
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi)
@@ -29,6 +40,22 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
     onPrevButtonClick,
     onNextButtonClick
   } = usePrevNextButtons(emblaApi)
+
+
+  const handlePrevButtonClick = () => {
+    onPrevButtonClick()
+    if(isAutoplay) toggleAutoplay()
+  }
+
+  const handleNextButtonClick = () => {
+    onNextButtonClick()
+    if(isAutoplay) toggleAutoplay()
+  }
+
+  const handleDotClick = (index: number) => {
+    onDotButtonClick(index)
+    if(isAutoplay) toggleAutoplay()
+  }
 
   return (
     <div className="embla">
@@ -44,15 +71,15 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = (props) => {
 
       <div className="embla__controls">
         <div className="embla__buttons invisible lg:visible">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          <PrevButton onClick={handlePrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={handleNextButtonClick} disabled={nextBtnDisabled} />
         </div>
 
         <div className="embla__dots gap-2">
           {scrollSnaps.map((_, index: number) => (
               <DotButton
                 key={index}
-                onClick={() => onDotButtonClick(index)}
+                onClick={() => handleDotClick(index)}
                 className={'neumorphism__out embla__dot'.concat(
                   index === selectedIndex ? ' neumorphism__in embla__dot--selected' : ''
                 )}

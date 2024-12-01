@@ -1,12 +1,13 @@
 import { lock } from "@/assets/works";
-import React from "react";
+import React, { ReactNode } from "react";
 
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
   title: string;
+  children: ReactNode;
 };
-const Modal = ({ isOpen, onClose, title }: ModalProps) => {
+const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
   const handleOnClose = () => {
     onClose();
   };
@@ -23,21 +24,16 @@ const Modal = ({ isOpen, onClose, title }: ModalProps) => {
               {/*header*/}
               <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
                 <h3 className="text-3xl font-semibold">{title}</h3>
-                <img
+                {title.includes('Private') && (
+                  <img
                     src={lock}
                     alt="source code"
                     className="w-8 h-auto object-contain rotate-12"
-                    />
+                  />
+                )}
               </div>
               {/*body*/}
-              <div className="relative p-6 flex-auto">
-                <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-                  Unfortunately, this repository is private. To respect the
-                  privacy of the company I worked for, I cannot share the base
-                  code. However, I would be happy to demonstrate the features I
-                  implemented during an interview.
-                </p>
-              </div>
+              <div className="relative p-6 flex-auto">{children}</div>
               {/*footer*/}
               <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
                 <button
