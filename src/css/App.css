@@ -163,12 +163,25 @@
   background: linear-gradient(145deg, #0f1623, #566a9a);
   box-shadow: 5px 5px 5px #0e1421, -1px -1px 5px #566a9a;
 }
-
+.neumorphism__in__button {
+  background: linear-gradient(145deg, #0f1623, #566a9a);
+  box-shadow: inset 5px 5px 5px #0e1421, -3px -3px 9px #566a9a;
+  border: 2px solid #566a9a;
+}
+.neumorphism__out__form {
+  background: linear-gradient(165deg, #566a9a, #121b2b);
+  box-shadow: 5px 5px 10px #0e1421, -1px -1px 10px #566a9a;
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
 /* Navbar */
 .flag {
   width: 1.5em;
-  line-height: 1.5em;
+  align-self: center;
+  left: 5%;
   border-radius: 50%;
+}
+.selected__lang {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 /* Hero */
 .neumorphism__inner_dot {

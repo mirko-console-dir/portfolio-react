@@ -16,7 +16,7 @@ const SelectLanguage = ({ language }: SelectLanguageProps) => {
 
   return (
     <div className="flex grow justify-center">
-      <button className="neumorphism__out p-1 rounded-full">
+      <button className="cursor-pointer neumorphism__out p-1.5 rounded-full relative">
         <img
           src={globe}
           alt="select language"
@@ -25,19 +25,31 @@ const SelectLanguage = ({ language }: SelectLanguageProps) => {
         />
       </button>
       {openChoices && (
-        <div className="py-1 px-4 flex justify-center gap-2 md:gap-5 absolute top-16 glassmorphism">
-          <button
-            className={`fi fi-gb flag cursor-pointer ${language === "en" ? "active" : ""}`}
-            onClick={() => onChange("en")}
-          />
-          <button
-            className={`fi fi-it flag cursor-pointer ${language === "it" ? "active" : ""}`}
-            onClick={() => onChange("it")}
-          />
-          <button
-            className={`fi fi-jp flag cursor-pointer ${language === "jp" ? "active" : ""}`}
-            onClick={() => onChange("jp")}
-          />
+        <div className="py-1 px-4 flex justify-center gap-2 md:gap-5 absolute top-16 glassmorphism rounded">
+          <button 
+            onClick={() => onChange("en")} 
+            className={`cursor-pointer ${language === "en" ? "selected__lang" : ""}`}
+          >
+            <div
+              className={`fi fi-gb flag`}
+            />
+          </button>
+          <button 
+            onClick={() => onChange("it")} 
+            className={`cursor-pointer ${language === "it" ? "selected__lang" : ""}`}
+          >
+            <div
+              className={`fi fi-it flag`}
+            />
+          </button>
+          <button 
+            onClick={() => onChange("jp")} 
+            className={`cursor-pointer ${language === "jp" ? "selected__lang" : ""}`}
+          >
+            <div
+              className={`fi fi-jp flag`}
+            />
+          </button>
         </div>
       )}
     </div>

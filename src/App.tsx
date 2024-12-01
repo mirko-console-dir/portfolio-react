@@ -6,6 +6,8 @@ import Experience from '@/components/experience/Experience'
 import Tech from '@/components/tech/Tech'
 import Works from '@/components/works/Works'
 import Feedbacks from '@/components/feedback/Feedbacks'
+import Contact from '@/components/contact/Contact'
+
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
       <Tech/>
       <Works />
       <Feedbacks/>
+      <Contact />
     </div>
   )
 }
