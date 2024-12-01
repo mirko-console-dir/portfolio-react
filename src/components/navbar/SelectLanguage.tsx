@@ -28,7 +28,7 @@ const SelectLanguage = ({ language }: SelectLanguageProps) => {
         <div className="py-1 px-4 flex justify-center gap-2 md:gap-5 absolute top-16 glassmorphism rounded">
           <button 
             onClick={() => onChange("en")} 
-            className={`cursor-pointer ${language === "en" ? "selected__lang" : ""}`}
+            className={`cursor-pointer flag__neumorphism rounded-2xl ${language === "en" ? "selected__lang" : ""}`}
           >
             <div
               className={`fi fi-gb flag`}
@@ -36,7 +36,7 @@ const SelectLanguage = ({ language }: SelectLanguageProps) => {
           </button>
           <button 
             onClick={() => onChange("it")} 
-            className={`cursor-pointer ${language === "it" ? "selected__lang" : ""}`}
+            className={`cursor-pointer flag__neumorphism rounded-2xl ${language === "it" ? "selected__lang" : ""}`}
           >
             <div
               className={`fi fi-it flag`}
@@ -44,7 +44,7 @@ const SelectLanguage = ({ language }: SelectLanguageProps) => {
           </button>
           <button 
             onClick={() => onChange("jp")} 
-            className={`cursor-pointer ${language === "jp" ? "selected__lang" : ""}`}
+            className={`cursor-pointer flag__neumorphism rounded-2xl ${language === "jp" ? "selected__lang" : ""}`}
           >
             <div
               className={`fi fi-jp flag`}
