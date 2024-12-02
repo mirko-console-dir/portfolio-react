@@ -7,6 +7,7 @@ import Tech from '@/components/tech/Tech'
 import Works from '@/components/works/Works'
 import Feedbacks from '@/components/feedback/Feedbacks'
 import Contact from '@/components/contact/Contact'
+import TechStack from '@/components/tech-stack/TechStack'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Experience/>
       <Tech/>
       <Works />
+      <TechStack />
       <Feedbacks/>
       <Contact />
     </div>
