@@ -7,7 +7,7 @@ const TechStackSearch = () => {
   const { loading, techStack } = useSearchTech(search);
 
   return (
-    <div>
+    <div className="py-10">
       <Search onChange={setSearch} textPlaceholder={"Technology"} />
       {loading && <p>Loading...</p>}
       {!loading && (
