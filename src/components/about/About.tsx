@@ -15,7 +15,7 @@ const About = () => {
   const { translate } = useLanguage();
 
   return (
-    <div className={`${styles.paddingX}`}>
+    <div className={`${styles.paddingX} ${styles.paddingT}`}>
       <BounceBottomInDiv>
         <p className={styles.sectionSubText}>{translate('about.title')}</p>
         <h2 className={styles.sectionHeadText}>{translate('about.subTitle')}</h2>

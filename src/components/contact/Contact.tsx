@@ -67,7 +67,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={`${[styles.paddingX, styles.paddingY]}`}>
+    <div className={`${styles.paddingX} ${styles.paddingT}`}>
       <BounceBottomInDiv>
         <p className={styles.sectionSubText}>{translate("contact.title")}</p>
         <h3 className={styles.sectionHeadText}>

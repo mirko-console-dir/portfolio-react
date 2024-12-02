@@ -1,7 +1,8 @@
 import {
   css,
   figma,
-  git,
+  github,
+  gitLab,
   html,
   javascript,
   mongodb,
@@ -15,12 +16,14 @@ import {
   angular,
   laravel,
   phpLogo,
+  python,
   jqueryLogo,
   vueJsLogo,
   mysqlLogo,
   next,
   sass,
   digitalocean,
+  aws,
   postman,
   photoshop,
   illustrator,
@@ -30,6 +33,11 @@ import {
   redis,
   googleAds,
   googleAna,
+  reactQuery,
+  zod,
+  linux,
+  vm,
+  kali,
 } from "@/assets/tech";
 
 export const technologies = [
@@ -46,6 +54,10 @@ export const technologies = [
     icon: phpLogo,
   },
   {
+    name: "Phyton",
+    icon: python,
+  },
+  {
     name: "React JS",
     icon: reactjs,
   },
@@ -54,8 +66,20 @@ export const technologies = [
     icon: reactjs,
   },
   {
+    name: "Next JS",
+    icon: next,
+  },
+  {
     name: "Redux Toolkit",
     icon: redux,
+  },
+  {
+    name: "React Query",
+    icon: reactQuery,
+  },
+  {
+    name: "Zod",
+    icon: zod,
   },
   {
     name: "Angular",
@@ -110,16 +134,16 @@ export const technologies = [
     icon: mysqlLogo,
   },
   {
-    name: "Next JS",
-    icon: next,
-  },
-  {
     name: "Three JS",
     icon: threeJs,
   },
   {
     name: "Digital ocean",
     icon: digitalocean,
+  },
+  {
+    name: "AWS",
+    icon: aws,
   },
   {
     name: "Azure",
@@ -130,8 +154,12 @@ export const technologies = [
     icon: postman,
   },
   {
-    name: "git",
-    icon: git,
+    name: "github",
+    icon: github,
+  },
+  {
+    name: "gitlab",
+    icon: gitLab,
   },
   {
     name: "figma",
@@ -160,5 +188,17 @@ export const technologies = [
   {
     name: "Google Analytics",
     icon: googleAna,
+  },
+  {
+    name: "Linux",
+    icon: linux,
+  },
+  {
+    name: "Virtaul Box",
+    icon: vm,
+  },
+  {
+    name: "Kali Linux",
+    icon: kali,
   },
 ];

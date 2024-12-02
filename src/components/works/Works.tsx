@@ -35,7 +35,6 @@ const Works = () => {
     return 6
   }, [screenWidth])
 
-  console.log(screenWidth)
   const chunkedProjects = chunkArray(projects, numberOfElements);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -45,7 +44,7 @@ const Works = () => {
 
   return (
     <div>
-      <BounceBottomInDiv className={`${styles.paddingX} pt-20`}>
+      <BounceBottomInDiv className={`${styles.paddingX} ${styles.paddingT}`}>
         <p className={`${styles.sectionSubText} `}>{translate('works.title')}</p>
         <h2 className={`${styles.sectionHeadText}`}>{translate('works.subTitle')}</h2>
       </BounceBottomInDiv>

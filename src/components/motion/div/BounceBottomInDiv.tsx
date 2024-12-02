@@ -9,7 +9,7 @@ type BounceBottomInDivProps = {
   visibleAmount?: number
   delay?: number
 }
-const BounceBottomInDiv = ({ children, containerClassName = "",className = "", visibleAmount = 0.8, delay = 0,...props }: BounceBottomInDivProps) => {
+const BounceBottomInDiv = ({ children, containerClassName = "",className = "", visibleAmount = 0.2, delay = 0,...props }: BounceBottomInDivProps) => {
   return (
     <motion.div 
         initial="offscreen"
