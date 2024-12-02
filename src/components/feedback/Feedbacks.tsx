@@ -29,17 +29,15 @@ const Feedbacks = () => {
 
   return (
     <div>
-      <div className={`${[styles.paddingX, styles.paddingY]}`}>
+      <div className={`${styles.paddingX} ${styles.paddingT}`}>
         <BounceBottomInDiv>
           <p className={styles.sectionSubText}>
             {translate("feedbacks.title")}
           </p>
-        </BounceBottomInDiv>
-        <FadeInText>
           <h2 className={styles.sectionHeadText}>
             {translate("feedbacks.subTitle")}
           </h2>
-        </FadeInText>
+        </BounceBottomInDiv>
       </div>
       <EmblaCarousel
         isAutoplay

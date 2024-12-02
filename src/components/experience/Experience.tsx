@@ -8,7 +8,7 @@ const Experience = () => {
   const { language, translate } = useLanguage();
 
   return (
-    <div className={`${(styles.paddingX, styles.paddingY)}`}>
+    <div className={`${styles.paddingX} ${styles.paddingT}`}>
       <BounceBottomInDiv>
         <p className={`${styles.sectionSubText} text-center`}>
           {translate("experience.title")}

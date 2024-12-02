@@ -35,12 +35,12 @@ export const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
         name: "apollo",
         color: "orange-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
       },
       {
         name: "node",
@@ -49,6 +49,10 @@ export const projects = [
       {
         name: "websocket",
         color: "yellow-text-gradient",
+      },
+      {
+        name: "redis",
+        color: "pink-text-gradient",
       },
     ],
     image: collaborative_mobile_app,
@@ -107,6 +111,10 @@ export const projects = [
         name: "sass",
         color: "pink-text-gradient",
       },
+      {
+        name: "azure",
+        color: "blue-text-gradient",
+      },
     ],
     image: access_app,
     source_code_link: "",
@@ -134,6 +142,10 @@ export const projects = [
       {
         name: "bootstrap",
         color: "pink-text-gradient",
+      },
+      {
+        name: "figma",
+        color: "orange-text-gradient",
       },
     ],
     image: sunbuds_app,

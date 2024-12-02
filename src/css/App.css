@@ -136,12 +136,13 @@
   user-select: none;
 }
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.25);
+  background: #ffffff40;
   box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 .neumorphism__out {
   background: linear-gradient(165deg, #566a9a, #121b2b);
   box-shadow: 5px 5px 5px #0e1421, -1px -1px 5px #566a9a;
@@ -177,11 +178,20 @@
 .flag {
   width: 1.5em;
   align-self: center;
-  left: 5%;
   border-radius: 50%;
 }
+.flag__neumorphism {
+  padding: 2px;
+  background: linear-gradient(145deg, #f4f4f480, #1f268703);
+  box-shadow: 1px 1px 5px #1f268703, -1px -1px 5px #f4f4f480;
+}
 .selected__lang {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  background: linear-gradient(145deg, #1f268703, #f4f4f480);
+  box-shadow: inset 1px 1px 5px #1f268703, -1px -1px 5px #f4f4f480;
+}
+.flag__neumorphism:active {
+  background: linear-gradient(145deg, #1f268703, #f4f4f480);
+  box-shadow: inset 1px 1px 5px #1f268703, -1px -1px 5px #f4f4f480;
 }
 /* Hero */
 .neumorphism__inner_dot {
