@@ -9,12 +9,7 @@ const translations = {
   it: itTranslations,
   jp: jpTranslations,
 };
-
-type LanguageProviderProps = {
-  children: ReactNode;
-};
-
-const LanguageProvider = ({ children }: LanguageProviderProps) => {
+const LanguageProvider = ({ children }: {children: ReactNode}) => {
   const [language, setLanguage] = useState<"en" | "it" | "jp">("en");
 
   const translate = (key: string): string => {

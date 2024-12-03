@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDebounce } from "./useDebounce";
 import { fetchSearchTechStack } from "@/api-simulator/fetchSearchTechStack";
+import { Tech } from "@/interfaces";
 
-type Tech = {
-  name: string;
-  icon: string;
-};
 export function useSearchTech(search: string) {
   const [loading, setLoading] = useState(false);
   const [techStack, setTechStack] = useState<Tech[]>();

@@ -1,14 +1,7 @@
-import { ReactNode } from 'react'
 import { motion } from "motion/react"
 import {bounceBottomIn} from "@/utils/motion"
+import {BounceBottomInDivProps} from "@/interfaces"
 
-type BounceBottomInDivProps = {
-  children: ReactNode, 
-  containerClassName?: string
-  className?: string,
-  visibleAmount?: number
-  delay?: number
-}
 const BounceBottomInDiv = ({ children, containerClassName = "",className = "", visibleAmount = 0.2, delay = 0,...props }: BounceBottomInDivProps) => {
   return (
     <motion.div 

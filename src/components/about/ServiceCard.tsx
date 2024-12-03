@@ -1,12 +1,8 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import BounceBottomInDiv from "@/components/motion/div/BounceBottomInDiv";
+import {ServiceCardProps} from "@/interfaces"
 
-type ServiceCardProps = {
-  title: string;
-  icon: string;
-  index: number
-};
 const ServiceCard = ({ title, icon, index}: ServiceCardProps) => (
   <Tilt className="w-full md:w-1/3 xl:w-1/5">
     <BounceBottomInDiv 

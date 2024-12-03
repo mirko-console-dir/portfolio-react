@@ -1,10 +1,6 @@
 import {useState} from "react"
 import {menu, close} from "@/assets/navbar"
-
-type HamburgerProps = {
-  language: string;
-  navLinks: any
-};
+import {HamburgerProps, NavItem} from "@/interfaces"
 
 const Hamburger = ({language, navLinks}: HamburgerProps) => {
   const [toggle, setToggle] = useState(false);
@@ -24,7 +20,7 @@ const Hamburger = ({language, navLinks}: HamburgerProps) => {
         } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
       >
         <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-          {navLinks.map((nav: any) => (
+          {navLinks.map((nav: NavItem) => (
             <li
               key={nav.id}
               className={`font-poppins font-medium cursor-pointer text-[16px] ${

@@ -1,25 +1,9 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { styles } from "@/css/theme/styles";
-type ObjStrKeyVal = { [key: string]: string };
-type Tag = {
-    name: string;
-    color: string;
-}
-type Project = {
-    name: ObjStrKeyVal,
-    description: ObjStrKeyVal
-    tags: Tag[]
-    image: string,
-    source_code_link: string
-}
-type SlideProps = {
-  projects: Project[];
-  language: string;
-  openModal: () =>void;
-};
+import {Project, SlideProjectsProps} from "@/interfaces"
 
-const Slide = ({ projects, language, openModal }: SlideProps) => {
+const Slide = ({ projects, language, openModal }: SlideProjectsProps) => {
   return (
     <div
       className={`${styles.paddingX} flex flex-wrap gap-10 justify-center pt-12 pb-4`}
