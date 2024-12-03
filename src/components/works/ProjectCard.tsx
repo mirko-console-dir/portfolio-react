@@ -1,24 +1,7 @@
 import React from "react";
 import BounceBottomInDiv from "../motion/div/BounceBottomInDiv";
 import { github, lock} from "@/assets/works";
-
-type ObjStrKeyVal = { [key: string]: string };
-type Tag = {
-  name: string;
-  color: string;
-};
-type Project = {
-  name: ObjStrKeyVal;
-  description: ObjStrKeyVal;
-  tags: Tag[];
-  image: string;
-  source_code_link: string;
-};
-type ProjectCardProps = {
-  project: Project;
-  language: string;
-  openModal: () => void;
-};
+import {ProjectCardProps, Tag} from "@/interfaces"
 
 const ProjectCard = ({ project, language, openModal }: ProjectCardProps) => {
   const nameProject = project.name[language] || "";

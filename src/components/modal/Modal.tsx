@@ -1,12 +1,6 @@
 import { lock } from "@/assets/works";
-import React, { ReactNode } from "react";
+import {ModalProps} from "@/interfaces"
 
-type ModalProps = {
-  isOpen: boolean;
-  onClose: () => void;
-  title: string;
-  children: ReactNode;
-};
 const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
   const handleOnClose = () => {
     onClose();

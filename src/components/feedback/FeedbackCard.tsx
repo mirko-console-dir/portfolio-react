@@ -1,19 +1,6 @@
 import { styles } from "@/css/theme/styles";
+import {FeedbackCardProps} from "@/interfaces"
 
-type ObjStrKeyVal = { [key: string]: string };
-
-type Feedback = {
-  testimonial: ObjStrKeyVal;
-  name: string;
-  designation: string;
-  company: string;
-  image?: string;
-};
-type FeedbackCardProps = {
-  feedback: Feedback;
-  language: string;
-  openModal: (img: string, title: string) => void;
-};
 const FeedbackCard = ({ feedback, language, openModal }: FeedbackCardProps) => {
   const handleOpenModal = () => {
     if (feedback.image) {

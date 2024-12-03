@@ -1,22 +1,8 @@
 import React from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import {ExperienceCardProps} from "@/interfaces"
 
-type Points = {
-  [key: string]: string[]; // Keys are strings (languages), values are arrays of strings (points)
-};
-type Experience = {
-  title: string;
-  company_name: string;
-  icon: string;
-  iconBg: string;
-  date: string;
-  points: Points;
-};
-type ExperienceCardProps = {
-  experience: Experience;
-  language: string;
-};
 const ExperienceCard = ({ experience, language }: ExperienceCardProps) => {
   const points = experience.points[language] || [];
 

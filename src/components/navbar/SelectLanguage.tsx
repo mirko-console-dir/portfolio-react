@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { globe } from "@/assets/navbar";
 
-type SelectLanguageProps = {
-  language: string;
-};
-const SelectLanguage = ({ language }: SelectLanguageProps) => {
+const SelectLanguage = ({ language }: {language: string}) => {
   const { setLanguage } = useLanguage();
 
   const onChange = (value: "en" | "it" | "jp") => {

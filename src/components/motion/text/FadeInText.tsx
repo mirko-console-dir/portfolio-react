@@ -1,10 +1,6 @@
-import {ReactNode} from "react";
 import { motion } from "motion/react"
+import {FadeInTextProps} from "@/interfaces"
 
-type FadeInTextProps = {
-    children: ReactNode, 
-    className?: string,
-  }
 const FadeInText = ({ children, className = "", ...props }: FadeInTextProps) => {
   return (
     <motion.p

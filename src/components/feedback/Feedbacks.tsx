@@ -1,7 +1,6 @@
 import { useCallback, useState, useRef } from "react";
 import { useLanguage } from "@/hooks/useLanguage";
 import BounceBottomInDiv from "@/components/motion/div/BounceBottomInDiv";
-import FadeInText from "../motion/text/FadeInText";
 import { styles } from "@/css/theme/styles";
 import EmblaCarousel from "@/components/shared-components/carousel/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
@@ -9,6 +8,7 @@ import Slide from "@/components/feedback/Slide";
 import { testimonials } from "@/constants/feedback";
 import Modal from "@/components/modal/Modal";
 import ModalContentFeedback from "./ModalContentFeedback";
+
 const OPTIONS: EmblaOptionsType = { loop: true, duration: 30 };
 
 const Feedbacks = () => {

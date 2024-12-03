@@ -1,9 +1,5 @@
 import React from "react";
-
-type SearchProps = {
-  onChange: (value: string) => void;
-  textPlaceholder: string;
-};
+import {SearchProps} from "@/interfaces"
 
 const Search = ({ onChange, textPlaceholder }: SearchProps) => {
   return (

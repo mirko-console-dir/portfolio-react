@@ -1,10 +1,4 @@
-type ObjStrKeyVal = { [key: string]: string };
-
-type NavItem = {
-  id: string;
-  title: ObjStrKeyVal;
-};
-
+import { NavItem } from "@/interfaces";
 export const navLinks: NavItem[] = [
   {
     id: "about",

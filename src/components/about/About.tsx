@@ -5,11 +5,7 @@ import ServiceCard from '@/components/about/ServiceCard';
 import { services } from '@/constants/about';
 import BounceBottomInDiv from '@/components/motion/div/BounceBottomInDiv';
 import FadeInText from '@/components/motion/text/FadeInText';
-
-type ServiceC = {
-  title: string
-  icon: string
-}
+import {ServiceC} from "@/interfaces"
 
 const About = () => {
   const { translate } = useLanguage();

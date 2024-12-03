@@ -1,20 +1,7 @@
 import React from "react";
 import { styles } from "@/css/theme/styles";
 import FeedbackCard from "./FeedbackCard";
-type ObjStrKeyVal = { [key: string]: string };
-
-type Feedback = {
-  testimonial: ObjStrKeyVal;
-  name: string;
-  designation: string;
-  company: string;
-  image?: string;
-};
-type SlideProps = {
-  feedback: Feedback;
-  language: string;
-  openModal: (img: string, title: string) => void;
-};
+import {SlideProps} from "@/interfaces"
 
 const Slide = ({ feedback, language, openModal }: SlideProps) => {
   return (
