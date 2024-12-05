@@ -28,6 +28,7 @@ export type BounceBottomInDivProps = {
   className?: string;
   visibleAmount?: number;
   delay?: number;
+  onClick?: () => void;
 };
 export type FadeInTextProps = {
   children: ReactNode;
