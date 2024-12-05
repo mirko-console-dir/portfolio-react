@@ -4,11 +4,13 @@ import FadeInText from '@/components/motion/text/FadeInText'
 import TechStackSearch from './TechStackSearch'
 import { useLanguage } from '@/hooks/useLanguage'
 import React from 'react'
+import Separator from '@/components/shared-components/separator/Separator'
 
 const TechStack = () => {
   const {translate} = useLanguage()
   return (
-    <div className={`${styles.paddingX} ${styles.paddingT}`}>
+    <div className={`${styles.paddingX}`}>
+        <Separator sectionTitle={"TechStack"}/>
         <BounceBottomInDiv>
         <p className={`${styles.sectionSubText} `}>{translate("tech.subTitle")}</p>
         <h2 className={`${styles.sectionHeadText}`}>{translate("tech.title")}</h2>

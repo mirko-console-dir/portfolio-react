@@ -10,7 +10,7 @@ import {
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import Autoplay from 'embla-carousel-autoplay'
 import { useAutoplay } from './EmblaCarouselAutoplay'
-
+import '@/css/embla.css'
 
 type EmblaCarouselProps = {
   slides: ReactNode[]

@@ -12,8 +12,10 @@ import restaurant_design from "./restaurant-design.webp";
 import sunbuds_app from "./sunbudswork.png";
 import github from "./github.webp";
 import lock from "./lock.svg";
+import linkedin_auto_apply from "./linkedin_auto_apply.webp";
 
 export {
+  linkedin_auto_apply,
   apple_design,
   bank_design,
   metaverse_design,

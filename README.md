@@ -12,3 +12,7 @@ Best regards,
 
 Mirko Saponaro
 mirko777.au@gmail.com
+
+# REMINDER FOR ME
+
+If there is some error with the date of the VerticalTimelineElement go to node_modules/@types/react-vertocal-timeline-component and update date to accept React.ReatNode as type of date

@@ -1,0 +1,18 @@
+.flag {
+  width: 1.5em;
+  align-self: center;
+  border-radius: 50%;
+}
+.flag__neumorphism {
+  padding: 2px;
+  background: linear-gradient(145deg, #f4f4f480, #1f268703);
+  box-shadow: 1px 1px 5px #1f268703, -1px -1px 5px #f4f4f480;
+}
+.selected__lang {
+  background: linear-gradient(145deg, #1f268703, #f4f4f480);
+  box-shadow: inset 1px 1px 5px #1f268703, -1px -1px 5px #f4f4f480;
+}
+.flag__neumorphism:active {
+  background: linear-gradient(145deg, #1f268703, #f4f4f480);
+  box-shadow: inset 1px 1px 5px #1f268703, -1px -1px 5px #f4f4f480;
+}

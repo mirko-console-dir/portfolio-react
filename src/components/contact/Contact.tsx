@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import BounceBottomInDiv from "../motion/div/BounceBottomInDiv";
 import { styles } from "@/css/theme/styles";
 import emailjs from "@emailjs/browser";
+import Separator from "@/components/shared-components/separator/Separator";
 
 const Contact = () => {
   const { translate } = useLanguage();
@@ -67,7 +68,9 @@ const Contact = () => {
   };
 
   return (
-    <div className={`${styles.paddingX} ${styles.paddingT}`}>
+    <div className={`${styles.paddingX}`}>
+      <Separator sectionTitle={"contact"}/>
+
       <BounceBottomInDiv>
         <p className={styles.sectionSubText}>{translate("contact.title")}</p>
         <h3 className={styles.sectionHeadText}>

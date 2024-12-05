@@ -1,11 +1,10 @@
 import React from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import {ExperienceCardProps} from "@/interfaces"
+import { ExperienceCardProps } from "@/interfaces";
 
 const ExperienceCard = ({ experience, language }: ExperienceCardProps) => {
   const points = experience.points[language] || [];
-
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -13,7 +12,12 @@ const ExperienceCard = ({ experience, language }: ExperienceCardProps) => {
         color: "#fff",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      date={experience.date}
+      date={
+        <div className="flex flex-col">
+          <span>{experience.date}</span>
+          <span>{experience.reason_left[language]}</span>
+        </div>
+      }
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
@@ -45,6 +49,18 @@ const ExperienceCard = ({ experience, language }: ExperienceCardProps) => {
           </li>
         ))}
       </ul>
+      <div className="flex flex-wrap gap-1 mt-4">
+        <p style={{ margin: 0, fontSize: "14px" }}>Tech stack:</p>
+        {experience.techStack.map((tech: string, index: number) => (
+          <p
+            key={index}
+            className="text-white-100"
+            style={{ margin: 0, fontSize: "14px" }}
+          >
+            {tech}
+          </p>
+        ))}
+      </div>
     </VerticalTimelineElement>
   );
 };

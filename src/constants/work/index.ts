@@ -11,54 +11,10 @@ import {
   minecraft_game,
   restaurant_design,
   sunbuds_app,
+  linkedin_auto_apply,
 } from "@/assets/works";
 
 export const projects = [
-  {
-    name: {
-      en: "Collaborative Event App",
-      it: "Collaborative Event App",
-      jp: "協力イベントアプリ",
-    },
-    description: {
-      en: "Experience seamless collaboration with this mobile app built using React Native, GraphQL, Node.js, MongoDB, Apollo, WebSocket, and integrated with Amazon AWS. Manage events and todos with friends or colleagues in real-time. The app features a modern and intuitive user interface, ensuring a smooth and efficient user experience.",
-      it: "Vivi una collaborazione senza soluzione di continuità con questa app mobile costruita con React Native, GraphQL, Node.js, MongoDB, Apollo, WebSocket e integrata con Amazon AWS. Gestisci eventi e attività da fare con amici o colleghi in tempo reale. L'app presenta un'interfaccia utente moderna e intuitiva, garantendo un'esperienza utente fluida ed efficiente.",
-      jp: "このモバイルアプリケーションは、React Native、GraphQL、Node.js、MongoDB、Apollo、WebSocketを使用して構築されており、Amazon AWSと統合されています。友人や同僚とリアルタイムでイベントやToDoを管理します。このアプリケーションは、モダンで直感的なユーザーインターフェースを備えており、スムーズで効率的なユーザーエクスペリエンスを保証します。",
-    },
-    tags: [
-      {
-        name: "react-native",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "graphql",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "apollo",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "node",
-        color: "green-text-gradient",
-      },
-      {
-        name: "websocket",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "redis",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: collaborative_mobile_app,
-    source_code_link:
-      "https://github.com/mirko-console-dir/react-native-event-app",
-  },
   {
     name: {
       en: "Metaverse",
@@ -89,67 +45,31 @@ export const projects = [
   },
   {
     name: {
-      en: "Acess app",
-      it: "Acess app",
-      jp: "アクセスアプリ",
+      en: "Online Bank WebApp",
+      it: "Online Bank WebApp",
+      jp: "オンラインバンクWebアプリ",
     },
     description: {
-      en: "Experience smooth communication and real-time updates with this dynamic web application. Bringing together in one convenient place, streamlining interactions, and fostering better collaboration among all stakeholders.",
-      it: "Vivi una comunicazione fluida e aggiornamenti in tempo reale con questa dinamica applicazione web. Riunendo in un unico luogo, semplificando le interazioni e favorendo una migliore collaborazione tra tutte le parti interessate.",
-      jp: "このダイナミックなWebアプリケーションでは、流暢なコミュニケーションとリアルタイムの更新を体験できます。便利な場所にまとめ、インタラクションを簡素化し、すべてのステークホルダー間でより良いコラボレーションを促進します。",
+      en: "A modern and sleek design concept for an online bank app, created with Next.js. This project focuses on the user interface and user experience, showcasing a clean and intuitive design. Although it's a design-only project, it demonstrates the potential of Next.js for building modern web applications.",
+      it: "Un concetto di design moderno e elegante per un'app di banca online, creata con Next.js. Questo progetto si concentra sull'interfaccia utente e sull'esperienza utente, mostrando un design pulito e intuitivo. Anche se è solo un progetto di design, dimostra il potenziale di Next.js per la creazione di applicazioni web moderne.",
+      jp: "Next.jsで作成されたオンラインバンクアプリのためのモダンで洗練されたデザインコンセプト。このプロジェクトはユーザーインターフェースとユーザーエクスペリエンスに焦点を当て、クリーンで直感的なデザインを展示しています。デザイン専用のプロジェクトですが、Next.jsを使用した現代のWebアプリケーションの潜在能力を示しています。",
     },
     tags: [
       {
-        name: "angular",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "laravel",
-        color: "green-text-gradient",
+        name: "nextjs",
+        color: "white-text-gradient",
       },
       {
         name: "sass",
         color: "pink-text-gradient",
       },
       {
-        name: "azure",
+        name: "react",
         color: "blue-text-gradient",
       },
     ],
-    image: access_app,
-    source_code_link: "",
-  },
-  {
-    name: {
-      en: "Sunbuds",
-      it: "Sunbuds",
-      jp: "サンバッズ",
-    },
-    description: {
-      en: "Discover a comprehensive e-commerce web application for legal CBD products. Perfectly tailored for efficient product management, this app empowers administrators to handle inventory to publishing engaging content, this all-in-one solution.",
-      it: "Scopri un'applicazione web e-commerce completa per prodotti CBD legali. Perfettamente progettata per una gestione efficiente dei prodotti, questa app permette agli amministratori di gestire l'inventario fino alla pubblicazione di contenuti accattivanti, offrendo una soluzione completa.",
-      jp: "合法的なCBD製品の包括的なeコマースWebアプリケーションを発見してください。効率的な製品管理に完璧に適合し、管理者が在庫を処理して魅力的なコンテンツを公開するのを支援するこのオールインワンソリューション。",
-    },
-    tags: [
-      {
-        name: "vuejs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "laravel",
-        color: "green-text-gradient",
-      },
-      {
-        name: "bootstrap",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "figma",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: sunbuds_app,
-    source_code_link: "",
+    image: bank_design,
+    source_code_link: "https://mirko-console-dir.github.io/hoobank-project/",
   },
   {
     name: {
@@ -181,34 +101,6 @@ export const projects = [
   },
   {
     name: {
-      en: "Minecraft",
-      it: "Minecraft",
-      jp: "マインクラフト",
-    },
-    description: {
-      en: "Using React's dynamic and flexible capabilities, I've recreated the iconic mechanics of Minecraft, allowing you to build and explore to your heart's content. Immerse yourself in a pixelated universe.",
-      it: "Utilizzando le capacità dinamiche e flessibili di React, ho ricreato le iconiche meccaniche di Minecraft, permettendoti di costruire ed esplorare senza limiti. Immergiti in un universo pixelato.",
-      jp: "Reactの動的かつ柔軟な機能を使用して、Minecraftの象徴的なメカニクスを再現しました。自分の好きなだけ建築や探索を楽しむことができます。ピクセルで表現された宇宙に没入してください。",
-    },
-    tags: [
-      {
-        name: "threejs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "react",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: minecraft_game,
-    source_code_link: "https://mirko-console-dir.github.io/minecraft-threejs/",
-  },
-  {
-    name: {
       en: "Custom T-shirt",
       it: "Custom T-shirt",
       jp: "カスタムTシャツ",
@@ -221,7 +113,7 @@ export const projects = [
     tags: [
       {
         name: "threejs",
-        color: "blue-text-gradient",
+        color: "white-text-gradient",
       },
       {
         name: "node",
@@ -231,10 +123,129 @@ export const projects = [
         name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
     ],
     image: custom_tshirt,
     source_code_link:
       "https://mirko-console-dir.github.io/threejs-custom-product/",
+  },
+  {
+    name: {
+      en: "Collaborative Event App",
+      it: "Collaborative Event App",
+      jp: "協力イベントアプリ",
+    },
+    description: {
+      en: "Experience seamless collaboration with this mobile app built using React Native. Manage events and todos with friends or colleagues in real-time. The app features a modern and intuitive user interface, ensuring a smooth and efficient user experience.",
+      it: "Vivi una collaborazione senza soluzione di continuità con questa app mobile costruita con React Native. Gestisci eventi e attività da fare con amici o colleghi in tempo reale. L'app presenta un'interfaccia utente moderna e intuitiva, garantendo un'esperienza utente fluida ed efficiente.",
+      jp: "このモバイルアプリケーションは、React Native。友人や同僚とリアルタイムでイベントやToDoを管理します。このアプリケーションは、モダンで直感的なユーザーインターフェースを備えており、スムーズで効率的なユーザーエクスペリエンスを保証します。",
+    },
+    tags: [
+      {
+        name: "react-native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "graphql",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "websocket",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "apollo",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "node",
+        color: "green-text-gradient",
+      },
+      {
+        name: "aws",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "redis",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: collaborative_mobile_app,
+    source_code_link:
+      "https://github.com/mirko-console-dir/react-native-event-app",
+  },
+
+  {
+    name: {
+      en: "Linkedin Auto Apply",
+      it: "Linkedin Auto Apply",
+      jp: "Linkedin自動応募",
+    },
+    description: {
+      en: "This project demonstrates how to save time on repetitive but valuable tasks. Compete in the fast-paced job market, where LinkedIn job postings often get over 100 applications within minutes. Let your machine handle applications for your dream job while you focus on studying or working.",
+      it: "Questo progetto mostra come risparmiare tempo in attività ripetitive ma utili. Competi in un mercato del lavoro frenetico, dove gli annunci su LinkedIn ricevono oltre 100 candidature in pochi minuti. Lascia che la tua macchina invii candidature mentre ti concentri su studio o lavoro.",
+      jp: "このプロジェクトは、繰り返し作業の時間を節約する方法を示します。LinkedInの求人は数分で100件以上の応募が集まることもあります。夢の仕事に応募するのはマシンに任せて、勉強や仕事に集中しましょう。",
+    },
+    tags: [
+      {
+        name: "anaconda",
+        color: "green-text-gradient",
+      },
+      {
+        name: "selenium",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "chromedriver",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "geckodriver",
+        color: "white-text-gradient",
+      },
+    ],
+    image: linkedin_auto_apply,
+    source_code_link:
+      "https://github.com/mirko-console-dir/Linkedin-Easy-Apply",
+  },
+  {
+    name: {
+      en: "Minecraft",
+      it: "Minecraft",
+      jp: "マインクラフト",
+    },
+    description: {
+      en: "Using React's dynamic and flexible capabilities, I've recreated the iconic mechanics of Minecraft, allowing you to build and explore to your heart's content. Immerse yourself in a pixelated universe.",
+      it: "Utilizzando le capacità dinamiche e flessibili di React, ho ricreato le iconiche meccaniche di Minecraft, permettendoti di costruire ed esplorare senza limiti. Immergiti in un universo pixelato.",
+      jp: "Reactの動的かつ柔軟な機能を使用して、Minecraftの象徴的なメカニクスを再現しました。自分の好きなだけ建築や探索を楽しむことができます。ピクセルで表現された宇宙に没入してください。",
+    },
+    tags: [
+      {
+        name: "threejs",
+        color: "white-text-gradient",
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: minecraft_game,
+    source_code_link: "https://mirko-console-dir.github.io/minecraft-threejs/",
   },
   {
     name: {
@@ -263,34 +274,6 @@ export const projects = [
     ],
     image: apple_design,
     source_code_link: "https://mirko-console-dir.github.io/apple-react/ ",
-  },
-  {
-    name: {
-      en: "Online Bank WebApp",
-      it: "Online Bank WebApp",
-      jp: "オンラインバンクWebアプリ",
-    },
-    description: {
-      en: "A modern and sleek design concept for an online bank app, created with Next.js. This project focuses on the user interface and user experience, showcasing a clean and intuitive design. Although it's a design-only project, it demonstrates the potential of Next.js for building modern web applications.",
-      it: "Un concetto di design moderno e elegante per un'app di banca online, creata con Next.js. Questo progetto si concentra sull'interfaccia utente e sull'esperienza utente, mostrando un design pulito e intuitivo. Anche se è solo un progetto di design, dimostra il potenziale di Next.js per la creazione di applicazioni web moderne.",
-      jp: "Next.jsで作成されたオンラインバンクアプリのためのモダンで洗練されたデザインコンセプト。このプロジェクトはユーザーインターフェースとユーザーエクスペリエンスに焦点を当て、クリーンで直感的なデザインを展示しています。デザイン専用のプロジェクトですが、Next.jsを使用した現代のWebアプリケーションの潜在能力を示しています。",
-    },
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "sass",
-        color: "green-text-gradient",
-      },
-      {
-        name: "react",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: bank_design,
-    source_code_link: "https://mirko-console-dir.github.io/hoobank-project/",
   },
   {
     name: {
@@ -335,7 +318,7 @@ export const projects = [
     tags: [
       {
         name: "javascript",
-        color: "blue-text-gradient",
+        color: "yellow-black-text-gradient",
       },
       {
         name: "scss",
@@ -363,10 +346,74 @@ export const projects = [
       },
       {
         name: "css",
-        color: "green-text-gradient",
+        color: "pink-text-gradient",
       },
     ],
     image: magic_memory_game,
     source_code_link: "https://mirko-console-dir.github.io/magic-memory/",
+  },
+  {
+    name: {
+      en: "Sunbuds",
+      it: "Sunbuds",
+      jp: "サンバッズ",
+    },
+    description: {
+      en: "Discover a comprehensive e-commerce web application for legal CBD products. Perfectly tailored for efficient product management, this app empowers administrators to handle inventory to publishing engaging content, this all-in-one solution.",
+      it: "Scopri un'applicazione web e-commerce completa per prodotti CBD legali. Perfettamente progettata per una gestione efficiente dei prodotti, questa app permette agli amministratori di gestire l'inventario fino alla pubblicazione di contenuti accattivanti, offrendo una soluzione completa.",
+      jp: "合法的なCBD製品の包括的なeコマースWebアプリケーションを発見してください。効率的な製品管理に完璧に適合し、管理者が在庫を処理して魅力的なコンテンツを公開するのを支援するこのオールインワンソリューション。",
+    },
+    tags: [
+      {
+        name: "vuejs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "laravel",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "figma",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: sunbuds_app,
+    source_code_link: "",
+  },
+  {
+    name: {
+      en: "Acess app",
+      it: "Acess app",
+      jp: "アクセスアプリ",
+    },
+    description: {
+      en: "Experience smooth communication and real-time updates with this dynamic web application. Bringing together in one convenient place, streamlining interactions, and fostering better collaboration among all stakeholders.",
+      it: "Vivi una comunicazione fluida e aggiornamenti in tempo reale con questa dinamica applicazione web. Riunendo in un unico luogo, semplificando le interazioni e favorendo una migliore collaborazione tra tutte le parti interessate.",
+      jp: "このダイナミックなWebアプリケーションでは、流暢なコミュニケーションとリアルタイムの更新を体験できます。便利な場所にまとめ、インタラクションを簡素化し、すべてのステークホルダー間でより良いコラボレーションを促進します。",
+    },
+    tags: [
+      {
+        name: "angular",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "laravel",
+        color: "green-text-gradient",
+      },
+      {
+        name: "sass",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "azure",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: access_app,
+    source_code_link: "",
   },
 ];

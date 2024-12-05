@@ -59,10 +59,12 @@ export type ServiceCardProps = {
 type Experience = {
   title: string;
   company_name: string;
+  reason_left: ObjStrKeyVal;
   icon: string;
   iconBg: string;
   date: string;
   points: ObjStrKeyValArray;
+  techStack: string[];
 };
 export type ExperienceCardProps = {
   experience: Experience;
