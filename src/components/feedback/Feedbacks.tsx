@@ -8,6 +8,7 @@ import Slide from "@/components/feedback/Slide";
 import { testimonials } from "@/constants/feedback";
 import Modal from "@/components/modal/Modal";
 import ModalContentFeedback from "./ModalContentFeedback";
+import Separator from "@/components/shared-components/separator/Separator";
 
 const OPTIONS: EmblaOptionsType = { loop: true, duration: 30 };
 
@@ -29,7 +30,8 @@ const Feedbacks = () => {
 
   return (
     <div>
-      <div className={`${styles.paddingX} ${styles.paddingT}`}>
+        <Separator sectionTitle={"testimonials"}/>
+      <div className={`${styles.paddingX}`}>
         <BounceBottomInDiv>
           <p className={styles.sectionSubText}>
             {translate("feedbacks.title")}

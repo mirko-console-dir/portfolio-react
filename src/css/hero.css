@@ -1,0 +1,9 @@
+.my_img {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.neumorphism__inner_dot {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #566a9a, #121b2b);
+  box-shadow: 1px 1px 10px #0e1421, -1px -1px 10px #566a9a;
+  border: 1px solid #192236;
+}

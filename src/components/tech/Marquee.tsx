@@ -1,5 +1,7 @@
 import { technologies } from "@/constants/tech";
 import { styles } from "@/css/theme/styles";
+import '@/css/marquee.css'
+
 const Marquee = () => {
   const speed = 20;
   const items = 10;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Search from "@/components/shared-components/search/Search";
+import Loader from "@/components/shared-components/Loader";
 import { useSearchTech } from "@/hooks/useSearchTech";
 
 const TechStackSearch = () => {
@@ -10,9 +11,9 @@ const TechStackSearch = () => {
     <div className="py-10">
       <Search onChange={setSearch} textPlaceholder={"Technology"} />
       <div className="pt-5 " style={{ minHeight: "50vh" }}>
-        {loading && <p>Loading...</p>}
+        {loading && <Loader/>}
         {!loading && (
-          <div className="flex flex-wrap mx-auto ">
+          <div className="flex flex-wrap mx-auto">
             {typeof techStack?.length != "undefined" &&
               techStack?.length > 0 &&
               techStack.map((tech, index) => {
@@ -29,7 +30,7 @@ const TechStackSearch = () => {
               })}
             {(typeof techStack?.length == "undefined" ||
               techStack?.length == 0) && (
-              <p className="text-center w-full">Nothing found</p>
+              <p className="text-center w-full">Sorry not used yet... Coming soon! 👽</p>
             )}
           </div>
         )}

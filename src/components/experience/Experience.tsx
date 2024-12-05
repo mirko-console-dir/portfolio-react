@@ -4,11 +4,13 @@ import BounceBottomInDiv from "../motion/div/BounceBottomInDiv";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { experiences } from "@/constants/experience";
 import ExperienceCard from "@/components/experience/ExperienceCard";
+import Separator from "@/components/shared-components/separator/Separator";
 const Experience = () => {
   const { language, translate } = useLanguage();
 
   return (
-    <div className={`${styles.paddingX} ${styles.paddingT}`}>
+    <div className={`${styles.paddingX}`}>
+      <Separator sectionTitle={"work"}/>
       <BounceBottomInDiv>
         <p className={`${styles.sectionSubText} text-center`}>
           {translate("experience.title")}

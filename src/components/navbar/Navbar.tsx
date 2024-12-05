@@ -1,13 +1,13 @@
-import { useState } from "react";
 import { styles } from "@/css/theme/styles";
 import { logo } from "@/assets/navbar";
 import { navLinks } from "@/constants/navbar";
 import SelectLanguage from "./SelectLanguage";
 import { useLanguage } from "@/hooks/useLanguage";
 import Hamburger from "./Hamburger";
+import { NavItem } from "@/interfaces";
+import '@/css/navbar.css'
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
   const { language } = useLanguage();
 
   return (
@@ -18,7 +18,6 @@ const Navbar = () => {
         <div
           className="flex items-center gap-2"
           onClick={() => {
-            setActive("");
             window.scrollTo(0, 0);
           }}
         >
@@ -26,26 +25,25 @@ const Navbar = () => {
             <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           </div>
           <p className="text-white text-[18px] font-bold md:flex on__hover__drop__shadow">
-            Mirko Saponaro &nbsp;<span className="xl:block hidden">| &nbsp;Fullstack Developer</span>
+            Mirko Saponaro &nbsp;
+            <span className="xl:block hidden">| &nbsp;Fullstack Developer</span>
           </p>
         </div>
         <SelectLanguage language={language} />
         <ul className="list-none hidden lg:flex flex-row gap-3 lg-mx-auto ">
-          {navLinks.map((nav: any) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title[language] ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer neumorphism__out px-3 rounded`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`} aria-label={nav.title}>
-                {nav.title[language]}
+          {navLinks.map((nav: NavItem) => (
+            <li key={nav.id}>
+              <a
+                href={`#${nav.title["en"].toLowerCase()}`}
+                aria-label={nav.title[language]}
+                className={`flex items-center text-secondary hover:text-white text-[18px] font-medium cursor-pointer neumorphism__out px-3 rounded`}
+              >
+                <span className="leading-8">{nav.title[language].toUpperCase()}</span>
               </a>
             </li>
           ))}
         </ul>
-        <Hamburger language={language} navLinks={navLinks}/>
+        <Hamburger language={language} navLinks={navLinks} />
       </div>
     </nav>
   );

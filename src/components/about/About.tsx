@@ -6,12 +6,14 @@ import { services } from '@/constants/about';
 import BounceBottomInDiv from '@/components/motion/div/BounceBottomInDiv';
 import FadeInText from '@/components/motion/text/FadeInText';
 import {ServiceC} from "@/interfaces"
+import Separator from '@/components/shared-components/separator/Separator';
 
 const About = () => {
   const { translate } = useLanguage();
 
   return (
-    <div className={`${styles.paddingX} ${styles.paddingT}`}>
+    <div className={`${styles.paddingX}`}>
+      <Separator sectionTitle={"about"}/>
       <BounceBottomInDiv>
         <p className={styles.sectionSubText}>{translate('about.title')}</p>
         <h2 className={styles.sectionHeadText}>{translate('about.subTitle')}</h2>
@@ -24,7 +26,7 @@ const About = () => {
           </React.Fragment>
         ))}
       </FadeInText>
-      <div id="about" className='mt-20 flex flex-wrap gap-10 justify-center'>
+      <div className='mt-20 flex flex-wrap gap-10 justify-center'>
         {services.map((service: ServiceC, index: number) => (
           <ServiceCard key={index} {...service} index={index}/>
         ))}

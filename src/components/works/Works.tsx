@@ -10,6 +10,7 @@ import { styles } from "@/css/theme/styles";
 import FadeInText from "@/components/motion/text/FadeInText";
 import useResponsiveWidth from "@/hooks/useResponsiveWidth";
 import ModalContentWork from "./ModalContentWork";
+import Separator from "@/components/shared-components/separator/Separator";
 
 const OPTIONS: EmblaOptionsType = { loop: true, duration: 30 };
 
@@ -44,7 +45,8 @@ const Works = () => {
 
   return (
     <div>
-      <BounceBottomInDiv className={`${styles.paddingX} ${styles.paddingT}`}>
+      <Separator sectionTitle={"projects"}/>
+      <BounceBottomInDiv className={`${styles.paddingX}`}>
         <p className={`${styles.sectionSubText} `}>{translate('works.title')}</p>
         <h2 className={`${styles.sectionHeadText}`}>{translate('works.subTitle')}</h2>
       </BounceBottomInDiv>
