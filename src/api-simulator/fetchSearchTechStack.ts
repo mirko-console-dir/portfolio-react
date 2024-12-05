@@ -1,7 +1,7 @@
 import { technologies } from "@/constants/tech";
 
 export const fetchSearchTechStack = async (search: string) => {
-  await new Promise((resolve, reject) => {
+  await new Promise((resolve) => {
     setTimeout(resolve, 1000);
   });
 
