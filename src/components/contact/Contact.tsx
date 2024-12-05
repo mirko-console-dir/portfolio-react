@@ -59,6 +59,7 @@ const Contact = () => {
           });
         },
         (error: Error) => {
+          if(error) setLoading(false);
           setLoading(false);
           alert(
             "Ahh, something went wrong. Please try again. or send an email to mirko777.au@gmail.com"
