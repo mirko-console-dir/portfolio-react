@@ -9,4 +9,5 @@ export default defineConfig({
       "@": "/src",
     },
   },
+  base: "/portfolio-react",
 });
